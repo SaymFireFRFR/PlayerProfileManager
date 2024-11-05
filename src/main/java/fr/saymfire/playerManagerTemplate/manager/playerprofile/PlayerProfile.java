@@ -70,4 +70,8 @@ public class PlayerProfile {
     public UUID getUuid() {
         return uuid;
     }
+
+    public void disconnect() {
+        PlayerProfileManager.getInstance().preUnregisterProfile(uuid);
+    }
 }
